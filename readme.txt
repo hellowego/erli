@@ -1,3 +1,4 @@
+eclipse config
 project --> properties --> pyDev-Django 
 	django manage.py : manage.py
 	django settling module : erli.settings
