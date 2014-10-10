@@ -4,3 +4,6 @@ project --> properties --> pyDev-Django
 	django settling module : erli.settings
 project --> properties --> pyDev-PONTHYPATH
 	add source folder --> erli
+hello centos git !
+
+
