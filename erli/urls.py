@@ -19,6 +19,8 @@ urlpatterns = patterns('',
     
     #url(r'^$', home),
     url(r'^$', 'erli.views.home', name='home'),
+    url(r'^checkout$', 'erli.views.checkout'),
+    url(r"^payments/", include("payments.urls")),
 )
 
 

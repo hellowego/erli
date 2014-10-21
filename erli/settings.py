@@ -133,6 +133,8 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    "django_forms_bootstrap",   # add by cf 14/10/16 stripe
+    "payments",                 # add by cf 14/10/16 stripe
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
@@ -169,3 +171,36 @@ LOGGING = {
         },
     }
 }
+
+# add by cf 14/10/16 stripe
+STRIPE_PUBLIC_KEY = os.environ.get("STRIPE_PUBLIC_KEY", "pk_test_HJ6azpaA76wTQgXFXLgnTVye")
+STRIPE_SECRET_KEY = os.environ.get("STRIPE_SECRET_KEY", "sk_test_kibD2OO9TmJvwNx18fAH0t6J")
+
+PAYMENTS_PLANS = {
+    "monthly": {
+        "stripe_plan_id": "pro-monthly",
+        "name": "Web App Pro ($25/month)",
+        "description": "The monthly subscription plan to WebApp",
+        "price": 25,
+        "currency": "usd",
+        "interval": "month"
+    },
+    "yearly": {
+        "stripe_plan_id": "pro-yearly",
+        "name": "Web App Pro ($199/year)",
+        "description": "The annual subscription plan to WebApp",
+        "price": 199,
+        "currency": "usd",
+        "interval": "year"
+    },
+    "monthly-trial": {
+        "stripe_plan_id": "pro-monthly-trial",
+        "name": "Web App Pro ($25/month with 30 days free)",
+        "description": "The monthly subscription plan to WebApp",
+        "price": 25,
+        "currency": "usd",
+        "interval": "month",
+        "trial_period_days": 30
+    },
+}
+
