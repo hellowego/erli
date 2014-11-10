@@ -20,6 +20,7 @@ urlpatterns = patterns('',
     #url(r'^$', home),
     url(r'^$', 'erli.views.home', name='home'),
     url(r'^checkout$', 'erli.views.checkout'),
+    url(r'^weixin$', 'erli.views.weixin'),
     url(r"^payments/", include("payments.urls")),
 )
 

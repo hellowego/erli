@@ -204,3 +204,4 @@ PAYMENTS_PLANS = {
     },
 }
 
+TEST_RUNNER = 'django.test.runner.DiscoverRunner'
